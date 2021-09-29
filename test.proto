@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+message IOPoint
+{
+  string name = 1;
+  double value = 2;
+}
+
+message IOPointList
+{
+  repeated IOPoint io_list = 1;
+}
+
+service IOService
+{
+  rpc GetIO (google.protobuf.Empty) returns (IOPointList) {}
+}

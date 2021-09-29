@@ -1,0 +1,11 @@
+version: '2.3'
+services:
+  ide:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: ide
+    container_name: ide
+    ports:
+      - "127.0.0.1:2222:22"
+      - "1111:1111"
