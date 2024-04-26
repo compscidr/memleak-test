@@ -2,7 +2,7 @@ ARG GRPC_VERSION=1.41.0
 ARG PROTOBUF_VERSION=3.18.0
 ARG SPDLOG_VERSION=1.9.2
 
-FROM ubuntu:jammy as prereqs
+FROM ubuntu:noble as prereqs
 RUN apt-get -qq update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     gnupg2 \
     curl \
